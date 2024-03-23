@@ -2,7 +2,7 @@
 
 #### Pré-condição:
 
-- O sistema está operacional e acessível via postman.
+- O servidor backend rodando.
 
 - Um usuário deve estar cadastrado no sistema como professor.
 
