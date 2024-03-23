@@ -2,45 +2,29 @@
 
 #### Pré-condição:
 
-- O sistema está operacional e acessível via navegador.
+- O sistema está operacional e acessível via postman.
 
-- O usuário já deve estar cadastrado no sistema.
+- Um usuário deve estar cadastrado no sistema como professor.
+
+- Deve existir ao menos uma aula em pelo menos uma turma em que um professor esteja dando aulas.
 
 #### Procedimento de Teste:
 
-1- Acesse o sistema pelo navegador.
-
-2- Colocar email e senha.
-
-3- O frontend envia o email e a senha atráves de uma rota post '/login'.
-
-4- o sitema verifica se o usuario existe.
-
-4- O usuário acessa a plataforma.
+Utilizando as libs 'jest' e 'supertest', criamos um teste de integração na rota '/aulas/proximas/:idProfessor'.
+No arquivo 'aulas-proximas-idProfessor.test.js' temos o código de teste.
+Para rodar o teste usamos 'npm teste', e a lib jest executa todos os arquivos .test que encontrar.
 
 #### Pós-condição:
 
-O usuário acessa a plataforma.
+A resposta da requisição deve ser retornada ao usuário pelo terminal.
 
 #### Resultados Esperados:
 
-O usuário é autenticado e acessa a plataforma.
+Deve retornar todas as próximas aulas de um professor.
 
 #### Resultados obtidos:
 
-O usuário conseguiu entrar no sistema.
-
-A seguir um print provando que o usuário existe no sistema:
-
-![alt text](../imagens/docs_backend/SQL-users.png)
-
-Inserindo o email e a senha:
-
-![alt text](../imagens/docs_frontend/login.png)
-
-Acessando a plataforma, após apertar "fazer login":
-
-![alt text](../imagens/docs_frontend/cards-professor.png)
+O usuário conseguiu ver suas próximas aulas.
 
 #### Análise dos Resultados:
 

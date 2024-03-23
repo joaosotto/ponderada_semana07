@@ -3,14 +3,18 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 describe("GET /aulas/proximas/:idProfessor", () => {
-  it("deve retornar 200", () => {
+  it("deve retornar 200", (done) => {
     request(process.env.API_URL)
       .get("/aulas/proximas/1")
       .expect(200)
       .then((response) => {
-        expect(response.body.data).toContain("2024");
-        expect(response.body.duracao).toBeLessThanOrEqual(3);
-        expect(response.body.id_turma).to.be.a("number");
-      });
+        response.body.forEach((item) => {
+          expect(typeof item.data).toBe("string");
+          expect(item.ocorrida).toBe(false);
+          expect(typeof item.id_turma).toBe("number");
+        });
+        done();
+      })
+      .catch((error) => done(error));
   });
 });

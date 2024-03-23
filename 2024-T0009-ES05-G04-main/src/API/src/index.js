@@ -1,12 +1,12 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-console.log(process.env.API_URL);
+// console.log(process.env.API_URL);
 
 const express = require("express");
 
 // Importa o middleware CORS personalizado
-const cors = require("./app/middlewares/cors");
+// const cors = require("./app/middlewares/cors");
 
 // Importa os arquivos de rotas para diferentes recursos da aplicação
 const UserRoutes = require("./app/routes/UserRoutes");
@@ -24,7 +24,7 @@ const app = express();
 app.use(express.json());
 
 // Middleware CORS para permitir requisições de diferentes origens
-app.use(cors);
+// app.use(cors);
 
 // Define as rotas para os diferentes recursos da aplicação
 app.use(UserRoutes);
