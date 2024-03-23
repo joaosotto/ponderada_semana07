@@ -16,17 +16,18 @@ Para rodar o teste usamos 'npm teste', e a lib jest executa todos os arquivos .t
 
 #### Pós-condição:
 
-A resposta da requisição deve ser retornada ao usuário pelo terminal.
+A resposta do teste deve ser retornado ao usuário pelo terminal.
 
 #### Resultados Esperados:
 
-Deve retornar todas as próximas aulas de um professor.
+Deve retornar 1 teste executado e com sucesso.
 
 #### Resultados obtidos:
 
-O usuário conseguiu ver suas próximas aulas.
+A rota /aulas/proximas/:idProfessor passou no teste.
+
+![alt text](image.png)
 
 #### Análise dos Resultados:
 
-O Login foi bem sucedido ao inserir as informações.
-Isso indica que o backend e o frontend estão se comunicando corretamente.
+A rota foi testada e respondeu como esperado. Isso indica que o backend dessa funcionalidade esta funcional e com a integridade dos dados garantida.
