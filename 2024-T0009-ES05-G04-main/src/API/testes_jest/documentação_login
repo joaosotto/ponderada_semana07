@@ -1,0 +1,48 @@
+### 1 - Login
+
+#### Pré-condição:
+
+- O sistema está operacional e acessível via navegador.
+
+- O usuário já deve estar cadastrado no sistema.
+
+#### Procedimento de Teste:
+
+1- Acesse o sistema pelo navegador.
+
+2- Colocar email e senha.
+
+3- O frontend envia o email e a senha atráves de uma rota post '/login'.
+
+4- o sitema verifica se o usuario existe.
+
+4- O usuário acessa a plataforma.
+
+#### Pós-condição:
+
+O usuário acessa a plataforma.
+
+#### Resultados Esperados:
+
+O usuário é autenticado e acessa a plataforma.
+
+#### Resultados obtidos:
+
+O usuário conseguiu entrar no sistema.
+
+A seguir um print provando que o usuário existe no sistema:
+
+![alt text](../imagens/docs_backend/SQL-users.png)
+
+Inserindo o email e a senha:
+
+![alt text](../imagens/docs_frontend/login.png)
+
+Acessando a plataforma, após apertar "fazer login":
+
+![alt text](../imagens/docs_frontend/cards-professor.png)
+
+#### Análise dos Resultados:
+
+O Login foi bem sucedido ao inserir as informações.
+Isso indica que o backend e o frontend estão se comunicando corretamente.
